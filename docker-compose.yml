@@ -1,0 +1,64 @@
+version: '3'
+volumes:
+  db_data:
+  composer_cache:
+networks:
+  banco:
+
+services:
+  application: &app
+    build:
+      context: ./
+      dockerfile: docker/Dockerfile
+    restart: always
+    environment:
+      APP_ENV: local
+      CONTAINER_ROLE: app
+    volumes:
+      - composer_cache:/root/.composer/cache:cached
+      - ./:/var/www:cached
+      - ./docker/scripts/init.sh:/docker-entrypoint-init.d/init.sh
+      - ./docker/config/php.ini:/usr/local/etc/php/php.ini:ro # READONLY
+    command:
+      - /docker-entrypoint-init.d/init.sh
+    # ports:
+    #   - 8002:80
+    networks:
+      - banco
+    depends_on:
+      - db
+
+  # usa YAML merge p/ mesclar configs com application
+  # scheduler:
+  #   <<: *app
+  #   environment:
+  #     APP_ENV: local
+  #     CONTAINER_ROLE: scheduler
+  #   depends_on:
+  #     - application
+
+  # usa YAML merge p/ mesclar configs com application
+  # queue:
+  #   <<: *app
+  #   environment:
+  #     APP_ENV: local
+  #     CONTAINER_ROLE: queue
+  #   depends_on:
+  #     - application
+
+  db:
+    image: mysql:8.0.19
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: B4rbear1a321
+      MYSQL_DATABASE: app_db
+      MYSQL_USER: app_user
+      MYSQL_PASSWORD: CutClub
+    volumes:
+      # Volume dos dados
+      - db_data:/var/lib/mysql/
+    networks:
+      - banco
+    # ports:
+    #   - 3306:3306
