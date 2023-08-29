@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Foundation\Application;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,17 +15,27 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+Route::group([
+    'as' => 'front.'
+], function() {
+
+    Route::group([
+        'middleware' => ['guest:customer,user']
+    ], function() {
+        Route::view('/login', 'login')->name('login');
+        Route::view('/register', 'register')->name('register');
+    });
+
+    Route::group([
+        'as' => 'auth.'
+    ], function() {
+
+        Route::post('/login', [LoginController::class, 'login'])->name('login');
+        Route::post('/register', [RegisterController::class, 'register'])->name('register');
+        Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+    });
+
+
+    require __DIR__ . '/front.php';
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-require __DIR__.'/auth.php';

@@ -1,4 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/img/capa-login.svg": "/img/capa-login.svg",
+    "/img/logo-login.svg": "/img/logo-login.svg",
+    "/img/logo-barbearia.svg": "/img/logo-barbearia.svg"
 }
