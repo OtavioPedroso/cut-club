@@ -32,7 +32,7 @@ Route::group([
 
         Route::post('/login', [LoginController::class, 'login'])->name('login');
         Route::post('/register', [RegisterController::class, 'register'])->name('register');
-        Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+        Route::post('/logout/{email}', [LoginController::class, 'logout'])->name('logout');
     });
 
 

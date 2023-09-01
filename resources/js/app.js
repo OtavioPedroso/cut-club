@@ -1,20 +1,7 @@
 require('./bootstrap');
 
-import { createApp, h } from 'vue';
-import { createInertiaApp } from '@inertiajs/inertia-vue3';
-import { InertiaProgress } from '@inertiajs/progress';
 
-const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
-
-createInertiaApp({
-    title: (title) => `${title} - ${appName}`,
-    resolve: (name) => require(`./Pages/${name}.vue`),
-    setup({ el, app, props, plugin }) {
-        return createApp({ render: () => h(app, props) })
-            .use(plugin)
-            .mixin({ methods: { route } })
-            .mount(el);
-    },
-});
-
-InertiaProgress.init({ color: '#4B5563' });
+import '@fortawesome/fontawesome-free/js/fontawesome'
+import '@fortawesome/fontawesome-free/js/solid' // https://fontawesome.com/icons?d=gallery&s=solid&m=free
+import '@fortawesome/fontawesome-free/js/regular' // https://fontawesome.com/icons?d=gallery&s=regular&m=free
+import '@fortawesome/fontawesome-free/js/brands'

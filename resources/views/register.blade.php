@@ -1,4 +1,5 @@
-@extends('app')
+@extends('layouts.app')
+
 <div class="flex items-center justify-center h-screen">
     <div class="w-2/3">
         <img src="{{ asset('/img/capa-login.svg') }}" alt="capa-login" class="h-full w-full">

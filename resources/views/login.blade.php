@@ -1,4 +1,5 @@
-@extends('app')
+@extends('layouts.app')
+
 <div class="flex items-center justify-center h-screen">
     <div class="w-2/3">
         <img src="{{ asset('/img/capa-login.svg') }}" alt="capa-login" class="h-full w-full">
@@ -21,8 +22,11 @@
                     <label for="password">Informa sua senha*</label>
                     <input type="password" id="password" name="password" class="rounded-sm border-gray-600" required>
                 </div>
-                <a href="{{ route('front.register') }}" class="underline">Não possuo cadastro.</a>
-                <div class="grid rounded-sm bg-gray-500 text-white mt-8 p-2">
+                @error('error', 'login')<small class="text-red-800">{{ $message }}</small>@enderror
+                <div class="mt-6">
+                    <a href="{{ route('front.register') }}" class="mt-8 underline">Não possuo cadastro.</a>
+                </div>
+                <div class="grid rounded-sm bg-gray-500 text-white p-2">
                     <button type="submit">Fazer login</button>
                 </div>
             </form>

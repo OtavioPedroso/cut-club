@@ -11,5 +11,6 @@
 </head>
 <body class="fixed w-full h-full">
 
+    <script src="{{ mix('/js/app.js') }}"></script>
 </body>
 </html>

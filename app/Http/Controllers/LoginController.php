@@ -32,19 +32,17 @@ class LoginController extends Controller
         }
 
         throw ValidationException::withMessages([
-            'login' => [trans('auth.failed')],
+            'error' => [trans('auth.failed')],
         ])->errorBag('login')->redirectTo(route('front.login'));
     }
 
-    public function logout(Request $request){
-        if ($request->email) {
-            $this->guard($request->email)->logout();
-            $request->session()->invalidate();
-            $request->session()->regenerateToken();
+    public function logout(Request $request, $email){
+        $this->guard($email)->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
 
-            return $request->wantsJson()
-                ? new JsonResponse([], 204)
-                : redirect()->intended(route('front.login'));
-        }
+        return $request->wantsJson()
+            ? new JsonResponse([], 204)
+            : redirect()->intended(route('front.login'));
     }
 }
