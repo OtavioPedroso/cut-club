@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ScheduleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +20,9 @@ Route::group([
     'middleware' => ['auth:customer,user']
 ], function() {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::get('/agenda', [ScheduleController::class, 'index'])->name('schedule');
+    Route::get('/perfil', [ProfileController::class, 'index'])->name('profile');
+
 });
 

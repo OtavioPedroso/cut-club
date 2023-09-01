@@ -17,22 +17,27 @@
                 <div class="grid">
                     <label for="name">Informe seu nome*</label>
                     <input type="text" id="name" name="name" class="rounded-sm border-gray-600" required>
+                    @error('error', 'login')<small class="text-red-800">{{ $message }}</small>@enderror
                 </div>
                 <div class="grid">
                     <label for="phone">Informa seu telefone*</label>
                     <input type="text" id="phone" name="phone" class="rounded-sm border-gray-600" required>
+                    @error('error', 'login')<small class="text-red-800">{{ $message }}</small>@enderror
                 </div>
                 <div class="grid">
                     <label for="email">Informe seu email*</label>
                     <input type="text" id="email" name="email" class="rounded-sm border-gray-600" required>
+                    @error('error', 'login')<small class="text-red-800">{{ $message }}</small>@enderror
                 </div>
                 <div class="grid">
                     <label for="password">Informa sua senha*</label>
                     <input type="password" id="password" name="password" class="rounded-sm border-gray-600" required>
+                    @error('error', 'login')<small class="text-red-800">{{ $message }}</small>@enderror
                 </div>
                 <div class="grid">
                     <label for="reg_password_confirmation">Confirmação de Senha*</label>
                     <input type="password" name="password_confirmation" id="reg_password_confirmation" >
+                    @error('error', 'login')<small class="text-red-800">{{ $message }}</small>@enderror
                 </div>
                 <div class="grid rounded-sm bg-gray-500 text-white mt-8 p-2">
                     <button type="submit">Fazer cadastro</button>

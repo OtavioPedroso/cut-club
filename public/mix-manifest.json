@@ -1,8 +1,8 @@
 {
-    "/js/app.js": "/js/app.js?id=828ee4b337689fda70710ed75e34403a",
-    "/css/app.css": "/css/app.css?id=805500de777258393be38fcd30efbe73",
-    "/img/capa-login.svg": "/img/capa-login.svg?id=f17d0f58bd28f6bbac929dbd8d3857b7",
-    "/img/image-sidebar.svg": "/img/image-sidebar.svg?id=673937d50f751de47e051e88eb568188",
-    "/img/logo-barbearia.svg": "/img/logo-barbearia.svg?id=78406187396a9eb16f7105a6e248d750",
-    "/img/sair-icon.svg": "/img/sair-icon.svg?id=977ec0d6336d6076a0398b091f535f8b"
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/img/capa-login.svg": "/img/capa-login.svg",
+    "/img/image-sidebar.svg": "/img/image-sidebar.svg",
+    "/img/logo-barbearia.svg": "/img/logo-barbearia.svg",
+    "/img/sair-icon.svg": "/img/sair-icon.svg"
 }
