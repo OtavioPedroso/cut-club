@@ -17,7 +17,7 @@
                 </li>
                 <li class="py-2">
                     <a href="{{ route('front.profile') }}" class="text-center">
-                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-gear"></i>
                         Perfil
                     </a>
                 </li>

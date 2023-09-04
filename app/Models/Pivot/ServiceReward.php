@@ -11,7 +11,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class ServiceReward extends Pivot
 {
     use HasFactory;
-    use SoftDeletes;
 
     protected $fillable = [
         'bonus_service',

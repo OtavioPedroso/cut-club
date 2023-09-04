@@ -8,7 +8,7 @@
         <div class="justify-center">
             <div class="justify-center h-full mb-8">
                 <div class="flex justify-center mb-2">
-                    <img src="{{ asset('/img/logo-barbearia.svg') }}" alt="logo" class="w-1/2">
+                    <img src="{{ asset('/img/logo-barbearia.svg') }}" alt="logo" class="lazyload w-1/2">
                 </div>
                 <h2 class="font-medium text-lg">Faça login e acesse nossos serviços</h2>
             </div>

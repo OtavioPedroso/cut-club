@@ -8,6 +8,7 @@ class ProfileController extends Controller
 {
     public function index()
     {
-       // return view('home');
+        $user = Auth()->user();
+        return view('profile', compact('user'));
     }
 }

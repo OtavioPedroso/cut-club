@@ -31,6 +31,7 @@ Route::group([
     ], function() {
 
         Route::post('/login', [LoginController::class, 'login'])->name('login');
+        Route::post('/update', [LoginController::class, 'update'])->name('update');
         Route::post('/register', [RegisterController::class, 'register'])->name('register');
         Route::post('/logout/{email}', [LoginController::class, 'logout'])->name('logout');
     });
