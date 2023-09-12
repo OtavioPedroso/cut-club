@@ -16,5 +16,27 @@
 <body class="fixed w-full h-full">
 
     <script src="{{ mix('/js/app.js') }}"></script>
+    <script>
+        window.addEventListener('toast', ({ detail }) => {
+                $toast.fire(detail.title, detail.message, detail.type);
+            })
+
+        window.addEventListener('alert', ({ detail }) => {
+            Swal.fire(detail.title, detail.message, detail.type);
+        })
+
+        @if(session('toast'))
+            @php
+                $toast = json_decode(session('toast'));
+            @endphp
+            window.addEventListener('DOMContentLoaded', () => {
+                $toast.fire('{{ $toast->title }}', '{{ $toast->message }}', '{{ $toast->type }}');
+            });
+            @php
+                unset($toast);
+            @endphp
+        @endif
+
+    </script>
 </body>
 </html>

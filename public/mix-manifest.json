@@ -1,11 +1,12 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/img/capa-login.svg": "/img/capa-login.svg",
-    "/img/image-recompesa.svg": "/img/image-recompesa.svg",
-    "/img/image-sidebar.svg": "/img/image-sidebar.svg",
-    "/img/logo-barbearia.svg": "/img/logo-barbearia.svg",
-    "/img/progresso-cinza.svg": "/img/progresso-cinza.svg",
-    "/img/progresso-verde.svg": "/img/progresso-verde.svg",
-    "/img/sair-icon.svg": "/img/sair-icon.svg"
+    "/js/app.js": "/js/app.js?id=f0220aeaef8a337a4e4f488a551ff05e",
+    "/css/app.css": "/css/app.css?id=01272ba6d98e77a930b35ec33f788c89",
+    "/img/capa-login.svg": "/img/capa-login.svg?id=f17d0f58bd28f6bbac929dbd8d3857b7",
+    "/img/image-recompesa.svg": "/img/image-recompesa.svg?id=0f8395b28416867407f1a8617f8e3c33",
+    "/img/image-sidebar.svg": "/img/image-sidebar.svg?id=673937d50f751de47e051e88eb568188",
+    "/img/logo-barbearia.svg": "/img/logo-barbearia.svg?id=78406187396a9eb16f7105a6e248d750",
+    "/img/progresso-cinza.svg": "/img/progresso-cinza.svg?id=e7927e782498bb4129f448a10604658e",
+    "/img/progresso-verde.svg": "/img/progresso-verde.svg?id=ec033ba11e8e97ef29f3b9c41d5ba8c6",
+    "/img/sair-icon.svg": "/img/sair-icon.svg?id=977ec0d6336d6076a0398b091f535f8b",
+    "/img/sem-foto.svg": "/img/sem-foto.svg?id=06f73055eff22fabac289b5cf2f266b7"
 }

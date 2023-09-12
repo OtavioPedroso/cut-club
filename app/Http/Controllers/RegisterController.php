@@ -23,11 +23,12 @@ class RegisterController extends Controller
 
     public function register(AuthRegistrationRequest $request){
         event(new Registered($customer = $this->create($request->validated())));
+
         $this->guard()->login($customer);
 
         return $request->wantsJson()
                     ? new JsonResponse([], 201)
-                    : redirect()->intended(route('front.login'));
+                    : redirect()->intended(route('front.dashboard'));
     }
 
     protected function create(array $data)

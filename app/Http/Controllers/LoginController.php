@@ -36,10 +36,6 @@ class LoginController extends Controller
         ])->errorBag('login')->redirectTo(route('front.login'));
     }
 
-    public function update(Request $request){
-        //
-    }
-
     public function logout(Request $request, $email){
         $this->guard($email)->logout();
         $request->session()->invalidate();

@@ -26,10 +26,9 @@ class RegistrationRequest extends FormRequest
      */
     protected function failedValidation(Validator $validator)
     {
-        $previous = url()->previous('/');
         throw (new ValidationException($validator))
                     ->errorBag($this->errorBag)
-                    ->redirectTo('/');
+                    ->redirectTo(route('front.register'));
     }
 
     /**

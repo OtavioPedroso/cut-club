@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,7 +32,7 @@ Route::group([
     ], function() {
 
         Route::post('/login', [LoginController::class, 'login'])->name('login');
-        Route::post('/update', [LoginController::class, 'update'])->name('update');
+        Route::put('/update', [ProfileController::class, 'update'])->name('update');
         Route::post('/register', [RegisterController::class, 'register'])->name('register');
         Route::post('/logout/{email}', [LoginController::class, 'logout'])->name('logout');
     });
