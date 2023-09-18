@@ -11,7 +11,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Service extends Model
 {
     use HasFactory;
-    use SoftDeletes;
     /**
      * The attributes that are mass assignable.
      *

@@ -153,10 +153,12 @@ return [
     */
 
     'attributes' => [
+        'date' => 'data',
         'name'      => 'nome',
-        'password'  => 'senha',
         'password_confirmation' => 'confirmação da senha',
+        'password'  => 'senha',
         'phone'     => 'telefone',
+        'time' => 'hora',
     ],
 
 ];

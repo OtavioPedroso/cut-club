@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('service_schedule', function (Blueprint $table) {
-            $table->boolean('used_bonus');
-            $table->boolean('executed');
+            $table->boolean('used_bonus')->nullable();
+            $table->boolean('executed')->nullable();
             $table->foreignId('service_id')->nullable()->constrained()->nullOnDelete();
             $table->foreignId('schedule_id')->constrained()->cascadeOnDelete();
             $table->timestamps();

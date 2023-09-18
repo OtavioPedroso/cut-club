@@ -22,7 +22,10 @@ Route::group([
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('/agenda', [ScheduleController::class, 'index'])->name('schedule');
+    Route::post('/agenda', [ScheduleController::class, 'scheduleService'])->name('scheduleService');
+
     Route::get('/perfil', [ProfileController::class, 'index'])->name('profile');
+
 
 });
 

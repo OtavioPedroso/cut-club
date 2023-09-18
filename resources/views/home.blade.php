@@ -6,7 +6,7 @@
 
     <!-- Conteúdo da página -->
     <div class="w-full">
-        <div class="flex justify-between items-center py-4 border-b-[1px] border-black px-4">
+        <div class="flex justify-between items-center py-4 border-b-[1px]  px-4">
             <div class="text-xl">
                 <h1>Home</h1>
             </div>
@@ -17,8 +17,8 @@
                 </a>
             </div>
         </div>
-        <div class="flex justify-between items-center m-8 border-[1px] border-black rounded-md">
-            <div class="w-1/3 py-4 border-r-[1px] border-black"> <!-- Define a largura da primeira div -->
+        <div class="flex justify-between items-center m-8 border-[1px]  rounded-md">
+            <div class="w-1/3 py-4 border-r-[1px] "> <!-- Define a largura da primeira div -->
                 <img src="{{ asset('/img/image-recompesa.svg') }}" alt="" class="w-32 h-32 mx-auto">
                 <p class="text-center">{{ $bonusAtual->bonus_service }}</p>
             </div>
